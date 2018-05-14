@@ -1,0 +1,100 @@
+{
+  "name": "design-patterns",
+  "description": "Design Patterns",
+  "version": "0.1.0",
+  "author": "Felipe Hlibco <felipe@matterapp.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hlibco/design-patterns.git"
+  },
+  "engines": {
+    "node": ">=8.10.0",
+    "yarn": ">=1.4.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -Rf ./.build && tsc",
+    "precov": "rm -Rf ./coverage",
+    "cov": "jest --coverage --collectCoverage --verbose",
+    "cov:html": "yarn cov && opn coverage/index.html",
+    "lint": "tslint --project . -s node_modules/custom-tslint-formatters/formatters 'src/**/*.+(ts|js)' -t grouped",
+    "prettier": "prettier --write './src/**/*.ts'",
+    "test": "jest --watch --verbose"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier && yarn lint && yarn build && yarn cov"
+    }
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageReporters": [
+      "html",
+      "text",
+      "lcov"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 25,
+        "functions": 25,
+        "lines": 25,
+        "statements": 25
+      }
+    },
+    "globalSetup": "./tests.setup.js",
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "notify": true,
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.build/"
+    ]
+  },
+  "dependencies": {
+    "confidence": "3.0.2",
+    "debug": "3.1.0",
+    "got": "8.3.0",
+    "inversify": "4.13.0",
+    "mysql2": "1.5.3",
+    "querystring": "0.2.0",
+    "reflect-metadata": "0.1.12",
+    "sequelize": "4.37.7",
+    "sequelize-typescript": "0.6.4",
+    "uuid": "3.0.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "8.10.1",
+    "@types/confidence": "1.4.30",
+    "@types/got": "8.3.0",
+    "@types/jest": "22.2.3",
+    "@types/jsonwebtoken": "^7.2.3",
+    "@types/node": "9.6.6",
+    "aws-lambda": "0.1.2",
+    "aws-sdk": "2.229.1",
+    "custom-tslint-formatters": "2.3.0",
+    "dotenv": "5.0.1",
+    "husky": "1.0.0-rc.2",
+    "jest": "22.4.3",
+    "prettier": "1.12.1",
+    "serverless": "1.26.1",
+    "serverless-aws-documentation": "0.8.0",
+    "serverless-enable-api-logs": "2.0.0",
+    "serverless-offline": "3.20.3",
+    "serverless-plugin-custom-domain": "2.0.0",
+    "serverless-plugin-include-dependencies": "3.1.0",
+    "serverless-plugin-typescript": "1.1.5",
+    "ts-jest": "22.4.4",
+    "ts-node": "6.0.0",
+    "tslib": "1.9.0",
+    "tslint": "5.9.1",
+    "tslint-config-prettier": "1.12.0",
+    "typescript": "2.8.3"
+  }
+}
