@@ -2,9 +2,9 @@ interface ICommand {
 	execute: () => void
 }
 interface IDevice {
-  on: () => void
-  off: () => void
-  getState: () => boolean
+	on: () => void
+	off: () => void
+	getState: () => boolean
 }
 
 class Cockpit {
@@ -12,22 +12,6 @@ class Cockpit {
 
 	execute() {
 		this.command.execute()
-	}
-}
-
-class Turbine implements IDevice {
-	private state = false
-
-	on() {
-		this.state = true
-	}
-
-	off() {
-		this.state = false
-	}
-
-	getState() {
-		return this.state
 	}
 }
 
@@ -44,6 +28,22 @@ class OffCommand implements ICommand {
 
 	execute() {
 		this.device.off()
+	}
+}
+
+class Turbine implements IDevice {
+	private state = false
+
+	on() {
+		this.state = true
+	}
+
+	off() {
+		this.state = false
+	}
+
+	getState() {
+		return this.state
 	}
 }
 

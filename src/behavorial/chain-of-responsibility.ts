@@ -26,13 +26,13 @@ class Discount {
 		const numberDiscount = new NumberDiscount()
 
 		// Based on the total price of items
-    const priceDiscount = new PriceDiscount()
+		const priceDiscount = new PriceDiscount()
 
-    // Useful to make all discounts execute next
-    const noneDiscount = new NoneDiscount()
+		// Useful to make all discounts execute next
+		const noneDiscount = new NoneDiscount()
 
-    numberDiscount.setNext(priceDiscount)
-    priceDiscount.setNext(noneDiscount)
+		numberDiscount.setNext(priceDiscount)
+		priceDiscount.setNext(noneDiscount)
 
 		return numberDiscount.exec(products)
 	}
@@ -68,9 +68,9 @@ class PriceDiscount {
 }
 
 class NoneDiscount {
-  exec(_0) {
-    return 0
-  }
+	exec(_0) {
+		return 0
+	}
 }
 
 export { ShoppingCart, Discount }
