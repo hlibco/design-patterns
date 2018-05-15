@@ -7,6 +7,10 @@ class Product {
 		this.notifyAll()
 	}
 
+	setPrice(price: number) {
+		this.price = price
+	}
+
 	getPrice() {
 		return this.price
 	}
@@ -29,8 +33,10 @@ class Product {
 }
 
 class Markup {
-	update(product) {
-		product.price = product.price * (1 + 0.3)
+	update(product: Product) {
+		const price = product.getPrice()
+		const markup = 0.3
+		product.setPrice(price * (1 + markup))
 	}
 }
 

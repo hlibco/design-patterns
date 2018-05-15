@@ -1,31 +1,31 @@
 function bonusVisitor(employee) {
-  const salary = employee.getSalary()
+	const salary = employee.getSalary()
 
 	if (employee instanceof Manager) {
-    employee.setBonus(salary * 2)
-  }
+		employee.setBonus(salary * 2)
+	}
 
 	if (employee instanceof Developer) {
-    employee.setBonus(salary)
-  }
+		employee.setBonus(salary)
+	}
 }
 
 class Employee {
-  bonus = 0
+	bonus = 0
 
 	constructor(private salary: number) {}
 
-	accept(visitor) {
+	accept(visitor: (entity: Employee) => void) {
 		visitor(this)
-  }
+	}
 
-  setBonus(bonus) {
-    this.bonus = bonus
-  }
+	setBonus(bonus: number) {
+		this.bonus = bonus
+	}
 
-  getSalary() {
-    return this.salary
-  }
+	getSalary(): number {
+		return this.salary
+	}
 }
 
 class Manager extends Employee {
