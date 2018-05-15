@@ -6,7 +6,7 @@ describe('builder', () => {
 			url: 'https://www.google.com',
 			method: 'post',
 			payload: { query: 'javascript' }
-    }
+		}
 
 		const requestBuilder = new RequestBuilder()
 		const request = requestBuilder
