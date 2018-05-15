@@ -1,8 +1,8 @@
 class Tax {
 	calc(value: number) {
 		if (value >= 1000) {
-      value = this.overThousand(value)
-    }
+			value = this.overThousand(value)
+		}
 
 		return this.complementaryFee(value)
 	}
@@ -15,7 +15,7 @@ class Tax {
 class Tax1 extends Tax {
 	constructor() {
 		super()
-  }
+	}
 
 	overThousand(value: number) {
 		return value * 1.1
@@ -25,7 +25,7 @@ class Tax1 extends Tax {
 class Tax2 extends Tax {
 	constructor() {
 		super()
-  }
+	}
 
 	overThousand(value: number) {
 		return value * 1.2

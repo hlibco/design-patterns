@@ -16,11 +16,11 @@ class Product {
 	}
 
 	unregister(observer) {
-    // this.actions = this.actions.filter(el => el !== observer)
-    const index = this.actions.indexOf(observer);
-    if (index > -1) {
-      this.actions.splice(index, 1);
-    }
+		// this.actions = this.actions.filter(el => el !== observer)
+		const index = this.actions.indexOf(observer)
+		if (index > -1) {
+			this.actions.splice(index, 1)
+		}
 	}
 
 	notifyAll() {
