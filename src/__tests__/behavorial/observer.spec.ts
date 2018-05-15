@@ -16,9 +16,16 @@ describe('observer', () => {
 		product.unregister(taxes)
 		product.setBasePrice(100)
 		const price2 = product.getPrice()
-		const expectPrice2 = 100 * 1.3
+    const expectPrice2 = 100 * 1.3
+
+    // Unregistering an unregistered observer
+    product.unregister(taxes)
+		product.setBasePrice(100)
+		const price3 = product.getPrice()
+		const expectPrice3 = expectPrice2
 
 		expect(price1).toBe(expectPrice1)
-		expect(price2).toBe(expectPrice2)
+    expect(price2).toBe(expectPrice2)
+    expect(price3).toBe(expectPrice3)
 	})
 })
