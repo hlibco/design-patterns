@@ -1,5 +1,5 @@
 export interface ITax {
-  overThousand(value: number): number
+	overThousand(value: number): number
 }
 
 class Tax {
@@ -13,6 +13,11 @@ class Tax {
 
 	complementaryFee(value: number) {
 		return value + 10
+	}
+
+	// Must not be called by the Tax class
+	overThousand(value: number) {
+		return value
 	}
 }
 
@@ -36,4 +41,4 @@ class Tax2 extends Tax implements ITax {
 	}
 }
 
-export { Tax1, Tax2 }
+export { Tax, Tax1, Tax2 }
