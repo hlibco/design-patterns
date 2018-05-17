@@ -3,7 +3,7 @@
 
 Here you will find the 23 (GoF - Gang of Four) design patterns implemented in TypeScript using ES6 classes.
 
-Follows the list of patterns separed by type:
+Follows the list of patterns separated by type:
 
 ### Creational Patterns
 Creational patterns are ones that create objects for you, rather than having you instantiate objects directly. This gives your program more flexibility in deciding which objects need to be created for a given case.
@@ -49,3 +49,7 @@ npm test
 
 ### Credits
 This work was highly inspired by [fbeline](https://github.com/fbeline/Design-Patterns-JS)
+
+### References
+[gztchan/design-patterns-in-typescript](https://github.com/gztchan/design-patterns-in-typescript)
+[torokmark/design_patterns_in_typescript](https://github.com/torokmark/design_patterns_in_typescript)
