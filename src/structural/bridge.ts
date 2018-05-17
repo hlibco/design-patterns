@@ -23,7 +23,7 @@ class HPprinter extends Printer {
 }
 
 class Ink {
-	constructor(public type) {}
+	constructor(public type: 'acrylic-based' | 'alcohol-based') {}
 	get() {
 		return this.type
 	}

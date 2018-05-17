@@ -1,3 +1,7 @@
+export interface ITax {
+  overThousand(value: number): number
+}
+
 class Tax {
 	calc(value: number) {
 		if (value >= 1000) {
@@ -12,7 +16,7 @@ class Tax {
 	}
 }
 
-class Tax1 extends Tax {
+class Tax1 extends Tax implements ITax {
 	constructor() {
 		super()
 	}
@@ -22,7 +26,7 @@ class Tax1 extends Tax {
 	}
 }
 
-class Tax2 extends Tax {
+class Tax2 extends Tax implements ITax {
 	constructor() {
 		super()
 	}
