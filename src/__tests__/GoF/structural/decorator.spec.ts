@@ -16,7 +16,7 @@ describe('flyweight', () => {
 		const priceOfPenneWithCheese = cheese.getPrice()
 
 		expect(priceOfPenne).toBe(8)
-		expect(priceOfPenneWithSauce).toBe(13)
-		expect(priceOfPenneWithCheese).toBe(11)
+		expect(priceOfPenneWithSauce).toBe(14)
+		expect(priceOfPenneWithCheese).toBe(12)
 	})
 })
