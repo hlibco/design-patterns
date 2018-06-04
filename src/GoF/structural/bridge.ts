@@ -1,29 +1,25 @@
 class Printer {
-	constructor(public ink) {}
+	constructor(private brand, private ink) {}
+
+	print() {
+		return `Printer: ${this.brand}, Ink: ${this.ink.get()}`
+	}
 }
 
 class EpsonPrinter extends Printer {
 	constructor(ink) {
-		super(ink)
-	}
-
-	print() {
-		return 'Printer: Epson, Ink: ' + this.ink.get()
+		super('Epson', ink)
 	}
 }
 
 class HPprinter extends Printer {
 	constructor(ink) {
-		super(ink)
-	}
-
-	print() {
-		return 'Printer: HP, Ink: ' + this.ink.get()
+		super('HP', ink)
 	}
 }
 
 class Ink {
-	constructor(public type: 'acrylic-based' | 'alcohol-based') {}
+	constructor(private type: 'acrylic-based' | 'alcohol-based') {}
 	get() {
 		return this.type
 	}

@@ -1,4 +1,4 @@
-import Iterator from '../../behavorial/iterator'
+import Iterator from '../../../GoF/behavorial/iterator'
 
 describe('iterator', () => {
 	test('next() & hasNext()', () => {

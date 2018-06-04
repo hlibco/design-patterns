@@ -1,4 +1,4 @@
-import BmwFactory from '../../creational/factory'
+import BmwFactory from '../../../GoF/creational/factory'
 
 describe('factory', () => {
 	test('sanity', () => {

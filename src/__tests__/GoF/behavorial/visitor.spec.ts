@@ -1,4 +1,8 @@
-import { Developer, Manager, bonusVisitor } from '../../behavorial/visitor'
+import {
+	Developer,
+	Manager,
+	bonusVisitor
+} from '../../../GoF/behavorial/visitor'
 
 describe('visitor', () => {
 	test('calculate manager bonus', () => {

@@ -1,4 +1,4 @@
-import ColorFactory from '../../structural/flyweight'
+import ColorFactory from '../../../GoF/structural/flyweight'
 
 describe('flyweight', () => {
 	test('sanity', () => {

@@ -3,7 +3,7 @@ import {
 	FloppyDisk,
 	HardDrive,
 	Memory
-} from '../../structural/composite'
+} from '../../../GoF/structural/composite'
 
 describe('composite', () => {
 	test('sanity', () => {

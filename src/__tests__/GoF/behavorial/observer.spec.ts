@@ -1,4 +1,4 @@
-import { Product, Markup, Taxes } from '../../behavorial/observer'
+import { Product, Markup, Taxes } from '../../../GoF/behavorial/observer'
 
 describe('observer', () => {
 	test('sanity', () => {

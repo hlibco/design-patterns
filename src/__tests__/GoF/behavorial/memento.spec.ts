@@ -1,4 +1,4 @@
-import { originator, Caretaker } from '../../behavorial/memento'
+import { originator, Caretaker } from '../../../GoF/behavorial/memento'
 
 describe('memento', () => {
 	test('sanity', () => {

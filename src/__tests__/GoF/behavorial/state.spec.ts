@@ -1,4 +1,4 @@
-import Order from '../../behavorial/state'
+import Order from '../../../GoF/behavorial/state'
 
 describe('state', () => {
 	test('sanity', () => {

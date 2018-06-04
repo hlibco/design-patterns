@@ -1,4 +1,4 @@
-import Person from '../../creational/singleton'
+import Person from '../../../GoF/creational/singleton'
 
 describe('singleton', () => {
 	test('sanity', () => {

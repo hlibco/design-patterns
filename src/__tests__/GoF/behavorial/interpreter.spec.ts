@@ -1,4 +1,4 @@
-import { Num, Subtract, Sum } from '../../behavorial/interpreter'
+import { Num, Subtract, Sum } from '../../../GoF/behavorial/interpreter'
 
 describe('interpreter', () => {
 	test('subtract()', () => {

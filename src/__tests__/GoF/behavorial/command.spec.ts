@@ -3,7 +3,7 @@ import {
 	Turbine,
 	OnCommand,
 	OffCommand
-} from '../../behavorial/command'
+} from '../../../GoF/behavorial/command'
 
 describe('command', () => {
 	let turbine: Turbine

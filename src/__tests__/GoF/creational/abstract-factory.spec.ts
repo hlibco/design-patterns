@@ -1,4 +1,4 @@
-import vehicleProducer from '../../creational/abstract-factory'
+import vehicleProducer from '../../../GoF/creational/abstract-factory'
 
 describe('abstract-factory', () => {
 	test('car', () => {

@@ -2,7 +2,7 @@ import {
 	Penne,
 	SauceDecorator,
 	CheeseDecorator
-} from '../../structural/decorator'
+} from '../../../GoF/structural/decorator'
 
 describe('flyweight', () => {
 	test('sanity', () => {

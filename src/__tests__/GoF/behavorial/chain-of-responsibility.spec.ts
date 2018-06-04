@@ -1,7 +1,7 @@
 import {
 	ShoppingCart,
 	Discount
-} from '../../behavorial/chain-of-responsibility'
+} from '../../../GoF/behavorial/chain-of-responsibility'
 
 describe('chain-of-responsibility', () => {
 	let shoppingCart: ShoppingCart

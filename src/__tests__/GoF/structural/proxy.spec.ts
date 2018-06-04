@@ -1,4 +1,4 @@
-import { Car, CarProxy, Driver } from '../../structural/proxy'
+import { Car, CarProxy, Driver } from '../../../GoF/structural/proxy'
 
 describe('proxy', () => {
 	test('driver < 18', () => {

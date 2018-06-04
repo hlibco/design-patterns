@@ -3,7 +3,7 @@ import {
 	guestStrategy,
 	regularStrategy,
 	premiumStrategy
-} from '../../behavorial/strategy'
+} from '../../../GoF/behavorial/strategy'
 
 describe('strategy', () => {
 	test('sanity', () => {

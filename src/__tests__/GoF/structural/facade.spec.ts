@@ -1,4 +1,4 @@
-import ShopFacade from '../../structural/facade'
+import ShopFacade from '../../../GoF/structural/facade'
 
 describe('facade', () => {
 	test('sanity', () => {

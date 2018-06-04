@@ -1,4 +1,4 @@
-import RequestBuilder from '../../creational/builder'
+import RequestBuilder from '../../../GoF/creational/builder'
 
 describe('builder', () => {
 	test('sanity', () => {

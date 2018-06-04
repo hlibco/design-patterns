@@ -1,4 +1,4 @@
-import { Airplane, TrafficTower } from '../../behavorial/mediator'
+import { Airplane, TrafficTower } from '../../../GoF/behavorial/mediator'
 
 describe('mediator', () => {
 	test('', () => {

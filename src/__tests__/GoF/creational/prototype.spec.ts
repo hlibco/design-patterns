@@ -1,4 +1,4 @@
-import Sheep from '../../creational/prototype'
+import Sheep from '../../../GoF/creational/prototype'
 
 describe('prototype', () => {
 	test('sanity', () => {

@@ -1,4 +1,4 @@
-import { Soldier, Jedi, JediAdapter } from '../../structural/adapter'
+import { Soldier, Jedi, JediAdapter } from '../../../GoF/structural/adapter'
 
 describe('adapter', () => {
 	test('sanity', () => {

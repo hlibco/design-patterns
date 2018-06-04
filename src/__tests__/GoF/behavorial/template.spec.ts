@@ -1,4 +1,4 @@
-import { Tax, Tax1, Tax2 } from '../../behavorial/template'
+import { Tax, Tax1, Tax2 } from '../../../GoF/behavorial/template'
 
 describe('template', () => {
 	test('calc', () => {

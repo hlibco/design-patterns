@@ -3,7 +3,7 @@ import {
 	HPprinter,
 	AcrylicInk,
 	AlcoholInk
-} from '../../structural/bridge'
+} from '../../../GoF/structural/bridge'
 
 describe('bridge', () => {
 	test('sanity', () => {
