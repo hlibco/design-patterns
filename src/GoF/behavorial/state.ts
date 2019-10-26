@@ -1,43 +1,43 @@
 class Order {
-	private state = new WaitingForPayment()
+  private state = new WaitingForPayment()
 
-	nextState() {
-		this.state = this.state.next()
-	}
+  nextState() {
+    this.state = this.state.next()
+  }
 
-	getStateLabel() {
-		return this.state.getLabel()
-	}
+  getStateLabel() {
+    return this.state.getLabel()
+  }
 }
 
 class OrderStatus {
-	constructor(private label: string, private nextStatus) {}
+  constructor(private label: string, private nextStatus) {}
 
-	next() {
-		return new this.nextStatus()
-	}
+  next() {
+    return new this.nextStatus()
+  }
 
-	getLabel() {
-		return this.label
-	}
+  getLabel() {
+    return this.label
+  }
 }
 
 class WaitingForPayment extends OrderStatus {
-	constructor() {
-		super('waitingForPayment', Shipping)
-	}
+  constructor() {
+    super('waitingForPayment', Shipping)
+  }
 }
 
 class Shipping extends OrderStatus {
-	constructor() {
-		super('shipping', Delivered)
-	}
+  constructor() {
+    super('shipping', Delivered)
+  }
 }
 
 class Delivered extends OrderStatus {
-	constructor() {
-		super('delivered', Delivered)
-	}
+  constructor() {
+    super('delivered', Delivered)
+  }
 }
 
-export default Order
+export { Order }

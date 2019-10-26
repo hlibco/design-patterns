@@ -1,18 +1,20 @@
 class Color {
-	constructor(public name) {}
+  constructor(public name) {}
 }
 
-export default class ColorFactory {
-	colors = {}
+class ColorFactory {
+  colors = {}
 
-	create(name) {
-		const color = this.colors[name]
+  create(name) {
+    const color = this.colors[name]
 
-		if (color) {
-			return color
-		}
+    if (color) {
+      return color
+    }
 
-		this.colors[name] = new Color(name)
-		return this.colors[name]
-	}
+    this.colors[name] = new Color(name)
+    return this.colors[name]
+  }
 }
+
+export { ColorFactory }

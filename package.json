@@ -16,9 +16,10 @@
     "format": "prettier --write \".src/**/*.ts\" --ignore-path ./.prettierignore && git status",
     "lint": "tslint --project . -c tslint.json -t stylish --fix 'src/**/*.+(ts|js)'",
     "build": "rm -Rf dist && tsc",
-    "test": "jest --watch --verbose",
-    "test:cov": "rm -Rf ./coverage && jest --coverage --collectCoverage --verbose",
-    "test:cov-html": "yarn test:cov && opn coverage/index.html"
+    "test:watch": "jest --watch --verbose --detectOpenHandles",
+    "test:cov": "rm -Rf ./coverage && jest --coverage --collectCoverage --verbose --detectOpenHandles",
+    "test:cov-html": "yarn test:cov && opn coverage/index.html",
+    "test:debug": "node --inspect-brk -r ts-node/register node_modules/.bin/jest --runInBand"
   },
   "lint-staged": {
     "*.{js,ts,json}": [

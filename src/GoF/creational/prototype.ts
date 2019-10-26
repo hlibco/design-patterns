@@ -1,9 +1,9 @@
 class Sheep {
-	constructor(public name, public weight) {}
+  constructor(public name, public weight) {}
 
-	clone() {
-		return new Sheep(this.name, this.weight)
-	}
+  clone() {
+    return new Sheep(this.name, this.weight)
+  }
 }
 
-export default Sheep
+export { Sheep }

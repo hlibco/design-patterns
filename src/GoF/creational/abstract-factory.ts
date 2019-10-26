@@ -1,28 +1,28 @@
 function vehicleProducer(type: string) {
-	if (type === 'car') {
-		return carFactory
-	}
-	return motorcycleFactory
+  if (type === 'car') {
+    return carFactory
+  }
+  return motorcycleFactory
 }
 
 function carFactory() {
-	return new Car()
+  return new Car()
 }
 
 function motorcycleFactory() {
-	return new Motorcycle()
+  return new Motorcycle()
 }
 
 class Car {
-	info() {
-		return 'the car'
-	}
+  info() {
+    return 'the car'
+  }
 }
 
 class Motorcycle {
-	info() {
-		return 'the motorcycle'
-	}
+  info() {
+    return 'the motorcycle'
+  }
 }
 
-export default vehicleProducer
+export { vehicleProducer }

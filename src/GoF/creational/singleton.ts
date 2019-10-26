@@ -1,14 +1,14 @@
 class Person {
-	static instance
-	public name
+  static instance
+  public name
 
-	constructor() {
-		if (typeof Person.instance !== 'object') {
-			Person.instance = this
-		}
+  constructor() {
+    if (typeof Person.instance !== 'object') {
+      Person.instance = this
+    }
 
-		return Person.instance
-	}
+    return Person.instance
+  }
 }
 
-export default Person
+export { Person }
