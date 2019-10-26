@@ -1,7 +1,6 @@
-semi: false
-singleQuote: true
-useTabs: true
-overrides:
-- files: "*.ts"
-  options:
-		parser: typescript
+{
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none"
+}

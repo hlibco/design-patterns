@@ -1,49 +1,49 @@
 class Pasta {
-	constructor(public price = 0) {}
+  constructor(public price = 0) {}
 
-	getPrice() {
-		return this.price
-	}
+  getPrice() {
+    return this.price
+  }
 }
 
 class Penne extends Pasta {
-	constructor(public price = 8) {
-		super(price)
-	}
+  constructor(public price = 8) {
+    super(price)
+  }
 }
 
 class PastaDecorator extends Pasta {
-	constructor(public pasta) {
-		super()
-	}
+  constructor(public pasta) {
+    super()
+  }
 
-	getPrice() {
+  getPrice() {
     // Additional charge to decorate the pasta
     const additionalCharge = 1
-		return this.pasta.getPrice() + additionalCharge
-	}
+    return this.pasta.getPrice() + additionalCharge
+  }
 }
 
 class SauceDecorator extends PastaDecorator {
-	constructor(pasta) {
-		super(pasta)
-	}
+  constructor(pasta) {
+    super(pasta)
+  }
 
-	getPrice() {
-    const decoratedPastaCharge = super.getPrice()
-		return decoratedPastaCharge + 5
-	}
+  getPrice() {
+    const decoratedPastaPrice = super.getPrice()
+    return decoratedPastaPrice + 5
+  }
 }
 
 class CheeseDecorator extends PastaDecorator {
-	constructor(pasta) {
-		super(pasta)
-	}
+  constructor(pasta) {
+    super(pasta)
+  }
 
-	getPrice() {
-		const decoratedPastaCharge = super.getPrice()
-		return decoratedPastaCharge + 3
-	}
+  getPrice() {
+    const decoratedPastaPrice = super.getPrice()
+    return decoratedPastaPrice + 3
+  }
 }
 
 export { Penne, SauceDecorator, CheeseDecorator }

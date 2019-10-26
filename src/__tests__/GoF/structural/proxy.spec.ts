@@ -1,17 +1,17 @@
-import { Car, CarProxy, Driver } from '../../../GoF/structural/proxy'
+import { CarProxy, Driver } from '../../../GoF/structural/proxy'
 
 describe('proxy', () => {
-	test('driver < 18', () => {
-		const driver = new Driver(15)
-		const carProxy = new CarProxy(driver)
+  test('driver < 18', () => {
+    const driver = new Driver(15)
+    const carProxy = new CarProxy(driver)
 
-		expect(() => carProxy.drive()).toThrow()
-	})
+    expect(() => carProxy.drive()).toThrow()
+  })
 
-	test('driver >= 18', () => {
-		const driver = new Driver(18)
-		const carProxy = new CarProxy(driver)
+  test('driver >= 18', () => {
+    const driver = new Driver(18)
+    const carProxy = new CarProxy(driver)
 
-		expect(carProxy.drive()).toBe('driving')
-	})
+    expect(carProxy.drive()).toBe('driving')
+  })
 })
