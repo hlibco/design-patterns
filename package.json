@@ -2,7 +2,7 @@
   "name": "design-patterns",
   "description": "Design Patterns in TypeScript",
   "version": "0.1.0",
-  "author": "Felipe Hlibco <felipe@matterapp.com>",
+  "author": "Felipe Hlibco",
   "repository": {
     "type": "git",
     "url": "https://github.com/hlibco/design-patterns.git"
