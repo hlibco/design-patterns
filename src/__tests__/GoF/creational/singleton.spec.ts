@@ -5,6 +5,8 @@ describe('singleton', () => {
     const personA = new Person()
     const personB = new Person()
 
-    expect(personA).toEqual(personB)
+    personA.name = 'Bob'
+
+    expect(personA.name).toEqual(personB.name)
   })
 })

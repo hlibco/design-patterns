@@ -13,7 +13,7 @@ class Penne extends Pasta {
 }
 
 class PastaDecorator extends Pasta {
-  constructor(public pasta) {
+  constructor(public pasta: Pasta) {
     super()
   }
 
@@ -25,24 +25,24 @@ class PastaDecorator extends Pasta {
 }
 
 class SauceDecorator extends PastaDecorator {
-  constructor(pasta) {
+  constructor(pasta: Pasta) {
     super(pasta)
   }
 
   getPrice() {
-    const decoratedPastaPrice = super.getPrice()
-    return decoratedPastaPrice + 5
+    const decoratedPastaCharge = super.getPrice()
+    return decoratedPastaCharge + 5
   }
 }
 
 class CheeseDecorator extends PastaDecorator {
-  constructor(pasta) {
+  constructor(pasta: Pasta) {
     super(pasta)
   }
 
   getPrice() {
-    const decoratedPastaPrice = super.getPrice()
-    return decoratedPastaPrice + 3
+    const decoratedPastaCharge = super.getPrice()
+    return decoratedPastaCharge + 3
   }
 }
 

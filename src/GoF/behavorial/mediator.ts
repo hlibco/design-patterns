@@ -1,31 +1,36 @@
 interface IAirplane {
-	position: number
-	trafficTower: TrafficTower
+  position: number
+  trafficTower: TrafficTower
 }
 
 interface ITrafficTower {
-	airplanes: IAirplane[]
-	requestPositions: () => number[]
+  airplanes: IAirplane[]
+  registerAirplane: (airplane: IAirplane) => void
+  requestPositions: () => number[]
 }
 
 class Airplane implements IAirplane {
-	constructor(public position: number, public trafficTower: ITrafficTower) {
-		trafficTower.airplanes.push(this)
-	}
+  constructor(public position: number, public trafficTower: ITrafficTower) {
+    trafficTower.registerAirplane(this)
+  }
 
-	requestPositions() {
-		return this.trafficTower.requestPositions()
-	}
+  requestPositions() {
+    return this.trafficTower.requestPositions()
+  }
 }
 
 class TrafficTower implements ITrafficTower {
-	airplanes: IAirplane[] = []
+  readonly airplanes: IAirplane[] = []
 
-	requestPositions(): number[] {
-		return this.airplanes.map(airplane => {
-			return airplane.position
-		})
-	}
+  registerAirplane(airplane: IAirplane) {
+    this.airplanes.push(airplane)
+  }
+
+  requestPositions(): number[] {
+    return this.airplanes.map(airplane => {
+      return airplane.position
+    })
+  }
 }
 
 export { Airplane, TrafficTower }

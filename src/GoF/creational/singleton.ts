@@ -3,7 +3,7 @@ class Person {
   public name
 
   constructor() {
-    if (typeof Person.instance !== 'object') {
+    if (typeof Person.instance === 'undefined') {
       Person.instance = this
     }
 
